@@ -1,0 +1,174 @@
+* Tennis 
+** TODO Model v1.2.6
+   SCHEDULED: <2018-04-06 Fri>
+- [ ] Generate run of 10-fold cross validation against v1.2.4/5 (with cheating player stats)
+- [ ] Generate tidypost_report()
+- [ ] Share reports for v1.2.4/5 and v1.2.6
+- [ ] Share tidyposterior comparison report
+** TODO Tennis modeling discussion group
+   SCHEDULED: <2018-04-18 16:00 Wed +2w>
+** TODO Save player stats v1.0.0
+   SCHEDULED: <2018-04-09 Mon>
+** TODO Update feat_eng script & generate a new feat_eng versioned file [/]
+   SCHEDULED: <2018-04-09 Mon>
+- [ ] Split feat_eng
+- [ ] Make sure player stats can be run independently
+** TODO Run 10-fold cross validation (without cheating) 
+   SCHEDULED: <2018-04-09 Mon>
+** TODO Run tidyposterior report on result of 10-fold cross validation
+   SCHEDULED: <2018-04-09 Mon>
+** Jasis adjusted probs
+*** TODO Check the feed I get from Olavi to see if this is already there
+*** TODO While we're at it, search for surface speed
+*** TODO Ask Olavi about it if it's unclear 
+** Features report
+*** TODO Generate a markdown report with info about the features we are using
+*** TODO Show the report to Eric and gather his feedback
+** Residuals
+*** TODO Add plot to actuals and jasis in the markdown report
+** Genetic Algorithm
+*** DONE Check results of experiment
+    CLOSED: [2018-04-02 Mon 20:22]
+*** DONE Replicate best model of experiment and run markdown report
+    CLOSED: [2018-04-02 Mon 20:22]
+** Integration to production
+*** TODO Learn more about the trading bot idea (maybe ask Michael)
+*** TODO Figure out next steps
+** Genetic Algorithm
+*** DONE Generate new model (v1.2.6) [10/10] 
+    CLOSED: [2018-04-02 Mon 19:39]
+The model should have the same structure and parameters as v1.2.5
+Model features (as per GA run; NLL on val = 0.5674283):
+- [X] RawServiceSup*RawServiceSup*ServerID
+- [X] RawServiceSup
+- [X] CL_MoneyFairProb1
+- [X] RawServiceSup*CL_TotalPoints
+- [X] TotalGames*GameDiff
+- [X] CL_TotalPoints
+- [X] TotalGamesPerSet
+- [X] TotalGames
+- [X] P2AvgSup
+- [X] P1AvgSup
+*** DONE Run the usual reports on the model
+    CLOSED: [2018-04-02 Mon 19:44]
+*** WAITING Compare to v1.2.4 (or v1.2.5)
+**** Run 10-fold cross validation; save to a file 
+**** tidypost_report()
+     
+* rnd.tennis
+** DONE Send Aaron an example of v1.2.4 call 
+   CLOSED: [2018-04-02 Mon 19:06]
+** DONE Add player stats v0.1.0 to /data                               
+   CLOSED: [2018-04-03 Tue 15:14]
+** CANCELLED Delete S3 implementation                                  
+- [ ] tennislive_1_2_X structure
+- [ ] predict. prefix for prediction functions
+- [ ] predict function from utils_predictions
+** DONE Review/merge Aaron's PR                                        
+   CLOSED: [2018-04-03 Tue 19:50]
+** DONE Ensure that the Rcpp results match expected results + update tests if needed
+   CLOSED: [2018-04-04 Wed 11:49]
+** DONE Turn two Roger Federer examples into tests                     
+   CLOSED: [2018-04-03 Tue 19:21]
+** WAITING Add player stats v1.0.0 to /data                         
+** DONE Change API to call stats by player name & version [7/7]
+   CLOSED: [2018-04-04 Wed 17:02]
+- [X] write/update tests for model v1.2.4
+- [X] write/update tests for model v1.2.3
+- [X] write get_player_stats() function
+- [X] test get_player_stats() function
+- [X] find all places where API update needs to occur
+- [X] change the functions params and call get_players_stats() instead
+- [X] make sure all tests pass
+** DONE Merge Aaron's PR
+   CLOSED: [2018-04-06 Fri 11:42] SCHEDULED: <2018-04-05 Thu>
+** DONE Add the check for first_server and a test or two for it
+   CLOSED: [2018-04-06 Fri 12:25] SCHEDULED: <2018-04-06 Fri>
+** TODO Re-deploy rnd.tennis (new version)
+   SCHEDULED: <2018-04-10 Tue>
+- [ ] Fix test errors 
+Probably an issue with `system.file`. Try changing the tests to match specific numbers, rather than a whole file.
+- [ ] Update version
+- [ ] Re-deploy (I think it's in DESCRIPTION)
+* rnd.mltools
+** TODO Player stats                                             
+   SCHEDULED: <2018-04-05 Thu>
+- [ ] Verify player stats work properly
+- [ ] Make sure default value is calculated correctly
+- [ ] Add "append" parameter (for k-fold cross validation)
+** TODO Tidyposterior report 
+   SCHEDULED: <2018-04-05 Thu>
+- [ ] Add ... params to tidypost_report
+- [ ] Fix the issue with the posterior probability violin plots
+- [ ] Change tidypost_report to use with templates (use_this)
+- [ ] Add functionality for Mahdi's use case
+** TODO Add k-fold cross validation functionality
+** TODO Add a template for the rnd report (with use_this)
+*** use a config file per sport to parameterize and then create RMDs from that
+*** build this for me
+*** try to get someone other than myself to use it
+** TODO Genetic Algorithm
+*** Create a framework to produce reasonable model for a new unknown sport within a week or so
+
+* jira tickets
+** TODO Go through jira tickets and make sure to add TODOs here
+
+* Baseball
+** DONE Have chat with Blake about "next inning"
+   CLOSED: [2018-04-03 Tue 13:24]
+** TODO Baseball modeling discussion group
+   SCHEDULED: <2018-04-11 16:00 Wed +2w>
+** TODO Continuous live [1/4]
+   SCHEDULED: <2018-04-06 Fri 13:30>
+Figure out how to integrate the table of adjustments to the prob matrix of baseball. Versioned?
+| BASE1 | BASE2 | BASE3 | OUTS | EXPECTED_RUNS |
+|-------+-------+-------+------+---------------|
+| FALSE | FALSE | FALSE |    0 |         0.481 |
+| FALSE | FALSE | FALSE |    1 |         0.254 |
+| FALSE | FALSE | FALSE |    2 |         0.098 |
+| TRUE  | FALSE | FALSE |    0 |         0.859 |
+| TRUE  | FALSE | FALSE |    1 |         0.509 |
+| TRUE  | FALSE | FALSE |    2 |         0.224 |
+| FALSE | TRUE  | FALSE |    0 |         1.100 |
+| FALSE | TRUE  | FALSE |    1 |         0.664 |
+| FALSE | TRUE  | FALSE |    2 |         0.319 |
+| FALSE | FALSE | TRUE  |    0 |         1.350 |
+| FALSE | FALSE | TRUE  |    1 |         0.950 |
+| FALSE | FALSE | TRUE  |    2 |         0.353 |
+| TRUE  | TRUE  | FALSE |    0 |         1.437 |
+| TRUE  | TRUE  | FALSE |    1 |         0.884 |
+| TRUE  | TRUE  | FALSE |    2 |         0.429 |
+| TRUE  | FALSE | TRUE  |    0 |         1.784 |
+| TRUE  | FALSE | TRUE  |    1 |         1.130 |
+| TRUE  | FALSE | TRUE  |    2 |         0.478 |
+| FALSE | TRUE  | TRUE  |    0 |         1.964 |
+| FALSE | TRUE  | TRUE  |    1 |         1.376 |
+| FALSE | TRUE  | TRUE  |    2 |         0.580 |
+| TRUE  | TRUE  | TRUE  |    0 |         2.292 |
+| TRUE  | TRUE  | TRUE  |    1 |         1.541 |
+| TRUE  | TRUE  | TRUE  |    2 |         0.752 |
+|-------+-------+-------+------+---------------|
+
+- [X] Get the transition matrix
+For all rows: 
+- [ ] Obtain the expected value from the row
+- [ ] Find the diference between the expected value in transition matrix vs the one in TangoTiger
+- [ ] Adjust all values accordingly
+
+* Tennis integration to Maggie  
+** DONE Follow up with Kunnal; make sure he has no roadblocks from my side 
+   CLOSED: [2018-04-03 Tue 13:23] 
+** WAITING Deploy changes to red.tennis for player stats usage
+* Tennis pre-game
+** TODO work on align logic (to align ML and Totals)
+* RnD group
+** TODO One-on-One with Ben
+   SCHEDULED: <2018-05-01 14:30 Tue>
+** DONE RnD weekly meeting
+   SCHEDULED: <2018-04-26 Thu 11:30 +1w>
+   :PROPERTIES:
+   :LAST_REPEAT: [2018-04-05 Thu 13:39]
+   :END:
+   - State "DONE"       from "TODO"       [2018-04-05 Thu 13:38]
+** TODO Sport modeling meeting
+   SCHEDULED: <2018-04-10 11:00 Tue +1w>

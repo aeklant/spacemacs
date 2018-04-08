@@ -1,0 +1,48 @@
+* Familia
+** DONE Depositar a mi papa
+   CLOSED: [2018-04-05 Thu 13:46] SCHEDULED: <2018-04-05 12:30 Thu>
+   - State "DONE"       from "IN-PROGRESS" [2018-04-05 Thu 13:46]
+* Pasaporte
+** DONE Hacer cita en el consulado
+   CLOSED: [2018-04-06 Fri 11:30]
+Llamar al telefono 1-877-639-4835
+   CLOSED: [2018-04-06 Fri 11:30]
+** TODO Sacar dinero del cajero para pagar el pasaporte
+   SCHEDULED: <2018-04-06 Fri>
+- CAD $180
+** TODO Cita en el consulado
+   SCHEDULED: <2018-04-09 10:30 Mon>
+Direccion: King St. West, suite 350, M5H 4C7
+Folio: 0904 1810 4554 5075 64
+* VIM
+** DONE Imprimir registers cheatsheet
+   CLOSED: [2018-04-02 Mon 10:56]
+** DONE Imprimir macros cheatsheet
+   CLOSED: [2018-04-02 Mon 10:56]
+** TODO Ver video "Mastering the VIM Language" 
+** TODO Ver video "VIM Navigation Commands" 
+** TODO Ver video "Stephen Belcher - Registers" 
+** TODO Ver video "Stephen Belcher - Macros" 
+* Emacs
+** TODO Distribute my org files
+   SCHEDULED: <2018-04-07 Sat>
+- [ ] Investigate owncloud and dropbox
+- [ ] Setup and make sure it works
+- [ ] Sync orgzly
+Consider using git (w/ private bitbucket repo) as alternative if other things fail
+** TODO Go through http://doc.norang.ca/org-mode.html
+   SCHEDULED: <2018-04-07 Sat>
+** TODO Python workflow in emacs
+- [ ] Research online about using python with emacs
+- [ ] Get a solid workflow going
+** DONE Preguntar a Aaron acerca de su "workflow"
+   CLOSED: [2018-04-02 Mon 10:58]
+** DONE Ver si es posible configurar spacemacs en AWS 
+   CLOSED: [2018-04-02 Mon 12:16]
+** DONE Instalar zenburn theme
+   CLOSED: [2018-04-02 Mon 18:56]
+* Despensa
+** DONE Hacer lista
+   CLOSED: [2018-04-02 Mon 19:03]
+** DONE Comprar despensa
+   CLOSED: [2018-04-04 Wed 19:53]
