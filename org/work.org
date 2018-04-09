@@ -150,6 +150,8 @@ Figure out how to integrate the table of adjustments to the prob matrix of baseb
 |-------+-------+-------+------+---------------|
 
 - [X] Get the transition matrix
+- [ ] Create matrix of runs scored based on transitions for odd transitions
+- [ ] Create matrix of runs scored based on transitions for even transitions
 For all rows: 
 - [ ] Obtain the expected value from the row
 - [ ] Find the diference between the expected value in transition matrix vs the one in TangoTiger

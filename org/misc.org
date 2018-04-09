@@ -7,10 +7,10 @@
    CLOSED: [2018-04-06 Fri 11:30]
 Llamar al telefono 1-877-639-4835
    CLOSED: [2018-04-06 Fri 11:30]
-** TODO Sacar dinero del cajero para pagar el pasaporte
-   SCHEDULED: <2018-04-06 Fri>
+** DONE Sacar dinero del cajero para pagar el pasaporte
+   CLOSED: [2018-04-08 Sun 18:03] SCHEDULED: <2018-04-06 Fri>
 - CAD $180
-** TODO Cita en el consulado
+** MEETING Cita en el consulado
    SCHEDULED: <2018-04-09 10:30 Mon>
 Direccion: King St. West, suite 350, M5H 4C7
 Folio: 0904 1810 4554 5075 64
@@ -24,14 +24,17 @@ Folio: 0904 1810 4554 5075 64
 ** TODO Ver video "Stephen Belcher - Registers" 
 ** TODO Ver video "Stephen Belcher - Macros" 
 * Emacs
-** TODO Distribute my org files
+** CANCELLED Distribute my org files
    SCHEDULED: <2018-04-07 Sat>
 - [ ] Investigate owncloud and dropbox
 - [ ] Setup and make sure it works
 - [ ] Sync orgzly
 Consider using git (w/ private bitbucket repo) as alternative if other things fail
+** IN-PROGRESS Read "Mastering Emacs"
+   - State "IN-PROGRESS" from "TODO"    [2018-04-08 Sun 18:05]
+   - State "TODO"       from              [2018-04-08 Sun 18:05]
 ** TODO Go through http://doc.norang.ca/org-mode.html
-   SCHEDULED: <2018-04-07 Sat>
+   SCHEDULED: <2018-04-14 Sat>
 ** TODO Python workflow in emacs
 - [ ] Research online about using python with emacs
 - [ ] Get a solid workflow going
