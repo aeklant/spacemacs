@@ -1,22 +1,19 @@
 * Tennis 
-** TODO Model v1.2.6
-   SCHEDULED: <2018-04-06 Fri>
-- [ ] Generate run of 10-fold cross validation against v1.2.4/5 (with cheating player stats)
-- [ ] Generate tidypost_report()
-- [ ] Share reports for v1.2.4/5 and v1.2.6
-- [ ] Share tidyposterior comparison report
-** TODO Tennis modeling discussion group
-   SCHEDULED: <2018-04-18 16:00 Wed +2w>
+** DONE Model v1.2.6
+   CLOSED: [2018-04-09 Mon 20:18] SCHEDULED: <2018-04-06 Fri>
+- [X] Generate run of 10-fold cross validation against v1.2.4/5 (with cheating player stats)
+- [X] Generate tidypost_report()
+- [X] Share reports for v1.2.4/5 and v1.2.6
+- [X] Share tidyposterior comparison report
+** MEETING Tennis modeling discussion group
+   SCHEDULED: <2018-05-02 Wed 16:00 +2w>
+   :PROPERTIES:
+   :LAST_REPEAT: [2018-04-18 Wed 17:24]
+   :END:
 ** TODO Save player stats v1.0.0
-   SCHEDULED: <2018-04-09 Mon>
-** TODO Update feat_eng script & generate a new feat_eng versioned file [/]
-   SCHEDULED: <2018-04-09 Mon>
-- [ ] Split feat_eng
-- [ ] Make sure player stats can be run independently
-** TODO Run 10-fold cross validation (without cheating) 
-   SCHEDULED: <2018-04-09 Mon>
+   SCHEDULED: <2018-04-24 Tue>
 ** TODO Run tidyposterior report on result of 10-fold cross validation
-   SCHEDULED: <2018-04-09 Mon>
+   SCHEDULED: <2018-04-24 Tue>
 ** Jasis adjusted probs
 *** TODO Check the feed I get from Olavi to see if this is already there
 *** TODO While we're at it, search for surface speed
@@ -56,6 +53,8 @@ Model features (as per GA run; NLL on val = 0.5674283):
 **** tidypost_report()
      
 * rnd.tennis
+** TODO Next steps for rnd.tennis
+   SCHEDULED: <2018-04-23 Mon>
 ** DONE Send Aaron an example of v1.2.4 call 
    CLOSED: [2018-04-02 Mon 19:06]
 ** DONE Add player stats v0.1.0 to /data                               
@@ -84,24 +83,25 @@ Model features (as per GA run; NLL on val = 0.5674283):
    CLOSED: [2018-04-06 Fri 11:42] SCHEDULED: <2018-04-05 Thu>
 ** DONE Add the check for first_server and a test or two for it
    CLOSED: [2018-04-06 Fri 12:25] SCHEDULED: <2018-04-06 Fri>
-** TODO Re-deploy rnd.tennis (new version)
-   SCHEDULED: <2018-04-10 Tue>
-- [ ] Fix test errors 
-Probably an issue with `system.file`. Try changing the tests to match specific numbers, rather than a whole file.
-- [ ] Update version
-- [ ] Re-deploy (I think it's in DESCRIPTION)
+** DONE Re-deploy rnd.tennis (new version)
+   CLOSED: [2018-04-13 Fri 19:45]
+   SCHEDULED: <2018-04-12 Thu>
+- [X] Update version (I think it's in DESCRIPTION)
+- [X] Re-deploy
 * rnd.mltools
 ** TODO Player stats                                             
-   SCHEDULED: <2018-04-05 Thu>
-- [ ] Verify player stats work properly
+   SCHEDULED: <2018-04-23 Mon>
+- [ ] Verify player stats work properly (compare to v0.1.0)
 - [ ] Make sure default value is calculated correctly
+- [ ] Compute and save the player stats
 - [ ] Add "append" parameter (for k-fold cross validation)
 ** TODO Tidyposterior report 
-   SCHEDULED: <2018-04-05 Thu>
+   SCHEDULED: <2018-04-24 Tue>
 - [ ] Add ... params to tidypost_report
 - [ ] Fix the issue with the posterior probability violin plots
 - [ ] Change tidypost_report to use with templates (use_this)
 - [ ] Add functionality for Mahdi's use case
+- [ ] Add proper documentation
 ** TODO Add k-fold cross validation functionality
 ** TODO Add a template for the rnd report (with use_this)
 *** use a config file per sport to parameterize and then create RMDs from that
@@ -109,17 +109,61 @@ Probably an issue with `system.file`. Try changing the tests to match specific n
 *** try to get someone other than myself to use it
 ** TODO Genetic Algorithm
 *** Create a framework to produce reasonable model for a new unknown sport within a week or so
-
 * jira tickets
 ** TODO Go through jira tickets and make sure to add TODOs here
 
 * Baseball
+** TODO Neg binomial distribution approach [%]
+   SCHEDULED: <2018-04-23 Mon>
+- [ ] Fit a neg binomial distribution to each of the base/outs states
+- [ ] Once we got the target runs, use that value as the mean to calculate a distribution of values using the fitted dist
+** Known distribution adjustment on top of predictions [%]
+   SCHEDULED: <2018-04-23 Mon>
+- [ ] Get the known (fitted) distribution (neg binomial) for the corresponding state
+- [ ] A = Using mean == our_expected_runs, calculate neg binomial of each run
+- [ ] B = Using mean == target_runs, calculate neg binomial of each run
+- [ ] Add A - B to the transition matrix probs
+- [ ] Normalize
+- [ ] Test
+** DONE Hardcoded distribution for continuous live [100%]
+   CLOSED: [2018-04-20 Fri 19:31] SCHEDULED: <2018-04-19 Thu>
+The main idea here is to get a specific value or distribution depending on the inning state
+- [X] Compile distribution data from [[https://gregstoll.dyndns.org/~gregstoll/baseball/runsperinning.html][runs per inning]]
+- [X] Save compiled values to a .csv
+- [X] Adapt continuous live function to use the compiled values
+** DONE Finish adjustments to PR #14
+   CLOSED: [2018-04-18 Wed 17:25] SCHEDULED: <2018-04-18 Wed>
+** TODO Deploy continuous live integration to mlb live
+   SCHEDULED: <2018-04-20 Fri>
+** DONE Check why the meanA is changing so much
+   CLOSED: [2018-04-17 Tue 18:25] SCHEDULED: <2018-04-17 Tue>
+** DONE Check continuous live changes output is compatible with sparse matrix implementation
+   CLOSED: [2018-04-17 Tue 16:03] SCHEDULED: <2018-04-17 Tue>
+** DONE Check continuous live with poisson works properly end-to-end
+   CLOSED: [2018-04-17 Tue 17:44] SCHEDULED: <2018-04-17 Tue>
+** DONE Continuous live adjustment with Poisson distribution
+   CLOSED: [2018-04-16 Mon 16:44] SCHEDULED: <2018-04-16 Mon>
+Base states and outs will be in markov_input
+- [X] copy the code from the scratch_continuous_live.R file (approach 2)
+- [X] Document generate_runs_matrix
+- [ ] Add tests for generate_runs_matrix
+- [X] Document apply_continuous_live
+- [ ] Add tests for apply_continuous_live
+- [X] Push changes to branch
+- [X] Make sure branch is up to date with origin/master
+- [X] Create Pull Request
+** CANCELLED Use negative binomial distribution for continuous live adjustments [1/3]
+   SCHEDULED: <2018-04-18 Wed>
+   - State "TODO"       from              [2018-04-12 Thu 15:45]
+   - [X] Fit a neg-binomial distribution to mlb data (use fitdistrplus::fitdist)
+   - [ ] Figure out how to predict based on the fitted distribution
+   - [ ] Use outs as "failures" and runs as "successes" in the formula
 ** DONE Have chat with Blake about "next inning"
    CLOSED: [2018-04-03 Tue 13:24]
-** TODO Baseball modeling discussion group
+** MEETING Baseball modeling discussion group
    SCHEDULED: <2018-04-11 16:00 Wed +2w>
-** TODO Continuous live [1/4]
-   SCHEDULED: <2018-04-06 Fri 13:30>
+** DONE Continuous live initial implementation [8/8]
+   CLOSED: [2018-04-11 Wed 15:56] SCHEDULED: <2018-04-06 Fri 13:30>
 Figure out how to integrate the table of adjustments to the prob matrix of baseball. Versioned?
 | BASE1 | BASE2 | BASE3 | OUTS | EXPECTED_RUNS |
 |-------+-------+-------+------+---------------|
@@ -150,27 +194,36 @@ Figure out how to integrate the table of adjustments to the prob matrix of baseb
 |-------+-------+-------+------+---------------|
 
 - [X] Get the transition matrix
-- [ ] Create matrix of runs scored based on transitions for odd transitions
-- [ ] Create matrix of runs scored based on transitions for even transitions
-For all rows: 
-- [ ] Obtain the expected value from the row
-- [ ] Find the diference between the expected value in transition matrix vs the one in TangoTiger
-- [ ] Adjust all values accordingly
-
-* Tennis integration to Maggie  
+- [X] Create matrix of runs scored based on transitions for odd matrices
+- [X] Create matrix of runs scored based on transitions for even matrices
+- [X] Hardcode (for now) TangoTiger table
+- [X] Get TangoTiger expected runs value
+- [X] Obtain our expected value
+- [X] Find the diference between the expected value in transition matrix vs the one in TangoTiger
+- [X] Adjust all values accordingly
+** DONE Fix negative probabilities issue in continuous live
+   CLOSED: [2018-04-12 Thu 15:44] SCHEDULED: <2018-04-12 Thu>
+- [X] Decide if we turn those numbers to zero or just close to it
+- [X] Decide how to re-distribute the remainder
+- [X] Use a poisson distribution instead of distributing uniformly
+** DONE Check that I have access to IRL-TSX-02.pinnaclesports.ecp [100%]
+   CLOSED: [2018-04-12 Thu 11:47] SCHEDULED: <2018-04-12 Thu>
+- [X] Ask IT to reset password
+- [X] Remote Desktop to it (domain is pinnaclesports)
+- [X] Verify I can open admin
+* Tennis integration to Maggie
 ** DONE Follow up with Kunnal; make sure he has no roadblocks from my side 
    CLOSED: [2018-04-03 Tue 13:23] 
 ** WAITING Deploy changes to red.tennis for player stats usage
 * Tennis pre-game
 ** TODO work on align logic (to align ML and Totals)
 * RnD group
-** TODO One-on-One with Ben
+** MEETING One-on-One with Ben
    SCHEDULED: <2018-05-01 14:30 Tue>
-** DONE RnD weekly meeting
+** MEETING RnD weekly meeting
    SCHEDULED: <2018-04-26 Thu 11:30 +1w>
    :PROPERTIES:
    :LAST_REPEAT: [2018-04-05 Thu 13:39]
    :END:
-   - State "DONE"       from "TODO"       [2018-04-05 Thu 13:38]
-** TODO Sport modeling meeting
+** MEETING Sport modeling meeting
    SCHEDULED: <2018-04-10 11:00 Tue +1w>

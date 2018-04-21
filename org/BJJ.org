@@ -1,0 +1,101 @@
+* BJJ Miscellaneous
+** WAITING Get drilling partner [0%]
+- [ ] Send group message to FB
+- [ ] Talk to whomever shows interest
+- [ ] Share high level topics of drilling list with partner
+- [ ] Share the idea of John Danaher's DVD
+- [ ] Agree on a set of things to work on first
+- [ ] Agree on a date to show up for first drilling session
+- [ ] Drill away
+** DONE Start a drilling list
+   CLOSED: [2018-04-15 Sun 16:41] SCHEDULED: <2018-04-13 Fri>
+* Guard passing
+** [[Demian Maia Style Passing]]
+*** Core Concepts:
+**** Tripod
+We always want to have at least three points of contact for base. Usually both legs and an arm.
+We can also use the head to post on opponents body/jaw as a contact point; this will make sweeping
+hard for them and it gives us inside control.
+**** Active Posting 
+As stated, we want to have at least three points of contact for base, but these points should be 
+dynamic. We may start with two feet on the ground and head on opponents chest, but then 
+post with a hand as opponent attempts to elevate a leg to sweep or something like that.
+**** Deflection
+As opponent tries to sweep or get out of the bottom, and once we have ensured our tripod is solid 
+by actively posting, deflection will allow to frustrate opponents attempts and at the same time, 
+advance our position. e.g. going from kneeling headquarters position to a leg weave/smash pass 
+by shifting our hips as opponent attempts a butterfly sweep. 
+*** Main Staging Point
+**** Headquarters
+The "Headquarters" position is also known as "Half Butterfly" and it is not to be confused 
+with what is sometimes known as Headquarters in MMA (which is basically just half guard; where some 
+fighters camp to strike the opponent on the bottom).
+
+In this context, "Headquarters" is a position where our opponent (bottom player) has a 
+butterfly hook under one of our legs, and we (top player) are using our other leg to pin our 
+opponent's other leg (the non butterfly hooking leg). We can be kneeling or standing.
+
+The headquarters position will serve as our main staging point, from which we will transition 
+to one of two positions:
+
+- Half Guard
+- Leg Weave/Smash Pass
+
+We can get to Headquarters position from top, by simply stepping deep with one leg to pin one 
+of our opponent's knees and then straddling our opponent's other leg (basically giving them 
+a butterfly hook for free). 
+***** Main Path to Headquarters (from top, when engaging the open guard)
+When moving into Headquarters we must ensure to have a tripod, as well as control of the inside 
+space. We can accomplish both of these tasks by using our head to post on the opponent's chest or 
+jaw before we step our pinning leg and straddle their hook.
+
+Alternatively, we can get to headquarters from our opponent's 3/4 guard, by standing up to our feet 
+(making sure to always keep a tripod and we are controling the inside space; never forget that) 
+and then pinning our opponent's leg (the non-butterfly hooking leg). Note that it is also possible 
+to go into headquarters from double butterfly hooks by circling one of our legs in and then using it 
+to pin (never forgetting to post/tripod).
+
+*** Finishing Positions
+From the Headquarters position, we will look to either move towards our opponent's hooking leg 
+or away from it (depending on where we find the least resistance). 
+
+**** Dope Mount/Leg Weave/Smash Pass
+If we move away from our opponent's hooking leg, we will look to get into a leg weave (AKA dope 
+mount or smash pass). This will typically happen when our opponent tries to use their butterfly 
+hook to sweep. When he does that, we must ensure our tripod stays dynamic by using active posting 
+and then we will look to shift our hips to the side, which will deflect the hook to the side and 
+likely land us in a leg weave. If the opponent manages to regain the hook, we can simply get back 
+to our headquarters.
+
+Once we are in the leg weave, we will look to flatten our opponent, then we will bring our outside 
+leg (the non-weaving one) into the pocket of our opponent's hip (the hip that is close to the 
+ground), at which point, we will simply slide our weaving leg up to achieve full mount.
+**** Inverted Half Guard
+If we move towards our opponent's hooking leg, we will look to go into half guard. It is important 
+to note that this will be an "unfair" half guard, because at this point, our opponent's back will be 
+flat on the ground and he will be carrying our weight (whether we are chest to chest or we are 
+still posting our head on his chest).
+
+From this point, we will look to move into inverted half guard by turning towards our opponent's 
+legs. The main goal here is to hide the underhook from the half guard side, so that it cannot be 
+used to sweep us (Lucas Leite style).
+
+Once we are in our inverted half guard, we will look to bring our foot (from our trapped leg) as 
+close as possible to our opponent's butt. At this point we must post on our opponent's leg 
+and push it below our knee. As soon as our knee is free, we need simply drive it (the knee) towards 
+the ground. We will end up in 3/4 mount. 
+* Armbars
+* Triangles
+* Guard Retention
+* Guard Recovery
+* Rides
+* Mat Returns
+* Back Attack/Control
+* Leglocks
+* Underhook Half Guard
+* Merkle
+* Funk rolling
+* Fireman's Carry
+* Turtle
+* Guillotines
+* Arm-in Triangles

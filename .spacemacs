@@ -341,4 +341,4 @@ you should place your code here."
 ;; use agenda to track all org files in home's org directory
 (setq org-agenda-files '("~/org"))
 
-(setq org-todo-keywords '((type "TODO(!)" "MEETING" "IN-PROGRESS(!)" "WAITING(!)" "CANCELLED(!)" "|" "DONE")))
+(setq org-todo-keywords '((type "TODO" "WAITING(@/!)" "|" "DONE" "MEETING" "CANCELLED")))

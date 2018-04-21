@@ -2,6 +2,14 @@
 ** DONE Depositar a mi papa
    CLOSED: [2018-04-05 Thu 13:46] SCHEDULED: <2018-04-05 12:30 Thu>
    - State "DONE"       from "IN-PROGRESS" [2018-04-05 Thu 13:46]
+** DONE Depositar a mi mama
+   CLOSED: [2018-04-16 Mon 16:43] SCHEDULED: <2018-04-16 Mon>
+- Codigo SWIFT: MENOMXMT
+- Banco: Banorte
+- Domicilio: Calle Vallarta #3, Ameca, Jalisco, Mexico, colonia centro, 46600
+- Nombre: Rosa Ma. Avalos Arizaga
+- Domicilio: Calle Pocito #21, Ameca, Jalisco, Mexico, colonia centro, 46600
+- Cuenta: 08 1661 0631
 * Pasaporte
 ** DONE Hacer cita en el consulado
    CLOSED: [2018-04-06 Fri 11:30]
@@ -10,8 +18,8 @@ Llamar al telefono 1-877-639-4835
 ** DONE Sacar dinero del cajero para pagar el pasaporte
    CLOSED: [2018-04-08 Sun 18:03] SCHEDULED: <2018-04-06 Fri>
 - CAD $180
-** MEETING Cita en el consulado
-   SCHEDULED: <2018-04-09 10:30 Mon>
+** DONE Cita en el consulado
+   CLOSED: [2018-04-09 Mon 13:32] SCHEDULED: <2018-04-09 10:30 Mon>
 Direccion: King St. West, suite 350, M5H 4C7
 Folio: 0904 1810 4554 5075 64
 * VIM
@@ -33,8 +41,10 @@ Consider using git (w/ private bitbucket repo) as alternative if other things fa
 ** IN-PROGRESS Read "Mastering Emacs"
    - State "IN-PROGRESS" from "TODO"    [2018-04-08 Sun 18:05]
    - State "TODO"       from              [2018-04-08 Sun 18:05]
+** TODO Ensure tasks are scheduled for the day they are created by default
+** TODO Showing only one day in calendar
+** TODO Fix MEETING and CANCELLED tags showing as DONE (they should have their own category or something)
 ** TODO Go through http://doc.norang.ca/org-mode.html
-   SCHEDULED: <2018-04-14 Sat>
 ** TODO Python workflow in emacs
 - [ ] Research online about using python with emacs
 - [ ] Get a solid workflow going
@@ -49,3 +59,8 @@ Consider using git (w/ private bitbucket repo) as alternative if other things fa
    CLOSED: [2018-04-02 Mon 19:03]
 ** DONE Comprar despensa
    CLOSED: [2018-04-04 Wed 19:53]
+* Ankle injury
+** DONE request WFH day for Wednesday
+   CLOSED: [2018-04-16 Mon 09:53] SCHEDULED: <2018-04-16 Mon>
+** DONE Laurie Bickerton appointment
+   CLOSED: [2018-04-18 Wed 14:46] SCHEDULED: <2018-04-18  12:00 Wed>
