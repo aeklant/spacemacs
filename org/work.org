@@ -11,9 +11,9 @@
    :LAST_REPEAT: [2018-04-18 Wed 17:24]
    :END:
 ** TODO Save player stats v1.0.0
-   SCHEDULED: <2018-04-24 Tue>
+   SCHEDULED: <2018-04-27 Fri>
 ** TODO Run tidyposterior report on result of 10-fold cross validation
-   SCHEDULED: <2018-04-24 Tue>
+   SCHEDULED: <2018-04-27 Fri>
 ** Jasis adjusted probs
 *** TODO Check the feed I get from Olavi to see if this is already there
 *** TODO While we're at it, search for surface speed
@@ -54,7 +54,7 @@ Model features (as per GA run; NLL on val = 0.5674283):
      
 * rnd.tennis
 ** TODO Next steps for rnd.tennis
-   SCHEDULED: <2018-04-23 Mon>
+   SCHEDULED: <2018-04-26 Thu>
 ** DONE Send Aaron an example of v1.2.4 call 
    CLOSED: [2018-04-02 Mon 19:06]
 ** DONE Add player stats v0.1.0 to /data                               
@@ -89,14 +89,19 @@ Model features (as per GA run; NLL on val = 0.5674283):
 - [X] Update version (I think it's in DESCRIPTION)
 - [X] Re-deploy
 * rnd.mltools
-** TODO Player stats                                             
-   SCHEDULED: <2018-04-23 Mon>
-- [ ] Verify player stats work properly (compare to v0.1.0)
-- [ ] Make sure default value is calculated correctly
-- [ ] Compute and save the player stats
+** TODO Player stats [2/4]
+   SCHEDULED: <2018-04-26 Thu>
+- [X] Verify player stats work properly (compare to v0.1.0)
+- [X] Make sure default value is calculated correctly
+- [ ] Compute and save the player stats [%]
+  - [ ] Compute the player stats with current feat_eng script (for comparison)
+  - [ ] Replace player stats code with the step_mean version of the code (step_mean_test.R)
+  - [ ] Compute the player stats with the changed code
+  - [ ] Ensure (again) that results are identical
+  - [ ] Save to "/rnddrive/sport/Tennis/live/FeatureEng/player_stats_1.0.0.rds"
 - [ ] Add "append" parameter (for k-fold cross validation)
 ** TODO Tidyposterior report 
-   SCHEDULED: <2018-04-24 Tue>
+   SCHEDULED: <2018-04-27 Fri>
 - [ ] Add ... params to tidypost_report
 - [ ] Fix the issue with the posterior probability violin plots
 - [ ] Change tidypost_report to use with templates (use_this)
@@ -113,12 +118,14 @@ Model features (as per GA run; NLL on val = 0.5674283):
 ** TODO Go through jira tickets and make sure to add TODOs here
 
 * Baseball
-** TODO Neg binomial distribution approach [%]
-   SCHEDULED: <2018-04-23 Mon>
-- [ ] Fit a neg binomial distribution to each of the base/outs states
-- [ ] Once we got the target runs, use that value as the mean to calculate a distribution of values using the fitted dist
-** Known distribution adjustment on top of predictions [%]
-   SCHEDULED: <2018-04-23 Mon>
+** TODO Debug markov 1.0.2(model 4.0.19) & markov 1.0.3 (model 4.0.20)
+   SCHEDULED: <2018-04-30 Mon>
+** DONE Neg binomial distribution approach [100%]
+   CLOSED: [2018-04-25 Wed 10:33] SCHEDULED: <2018-04-23 Mon>
+- [X] Fit a neg binomial distribution to each of the base/outs states
+- [X] Once we got the target runs, use that value as the mean to calculate a distribution of values using the fitted dist
+** DONE Known distribution adjustment on top of predictions [%]
+   CLOSED: [2018-04-25 Wed 15:52] SCHEDULED: <2018-04-23 Mon>
 - [ ] Get the known (fitted) distribution (neg binomial) for the corresponding state
 - [ ] A = Using mean == our_expected_runs, calculate neg binomial of each run
 - [ ] B = Using mean == target_runs, calculate neg binomial of each run
@@ -133,8 +140,8 @@ The main idea here is to get a specific value or distribution depending on the i
 - [X] Adapt continuous live function to use the compiled values
 ** DONE Finish adjustments to PR #14
    CLOSED: [2018-04-18 Wed 17:25] SCHEDULED: <2018-04-18 Wed>
-** TODO Deploy continuous live integration to mlb live
-   SCHEDULED: <2018-04-20 Fri>
+** DONE Deploy continuous live integration to mlb live
+   CLOSED: [2018-04-25 Wed 18:06] SCHEDULED: <2018-04-20 Fri>
 ** DONE Check why the meanA is changing so much
    CLOSED: [2018-04-17 Tue 18:25] SCHEDULED: <2018-04-17 Tue>
 ** DONE Check continuous live changes output is compatible with sparse matrix implementation
@@ -214,7 +221,7 @@ Figure out how to integrate the table of adjustments to the prob matrix of baseb
 * Tennis integration to Maggie
 ** DONE Follow up with Kunnal; make sure he has no roadblocks from my side 
    CLOSED: [2018-04-03 Tue 13:23] 
-** WAITING Deploy changes to red.tennis for player stats usage
+** WAITING Deploy changes to rnd.tennis for player stats usage
 * Tennis pre-game
 ** TODO work on align logic (to align ML and Totals)
 * RnD group
@@ -226,4 +233,4 @@ Figure out how to integrate the table of adjustments to the prob matrix of baseb
    :LAST_REPEAT: [2018-04-05 Thu 13:39]
    :END:
 ** MEETING Sport modeling meeting
-   SCHEDULED: <2018-04-10 11:00 Tue +1w>
+   SCHEDULED: <2018-04-24 Tue 11:00 +1w>
